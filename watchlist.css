@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.imdb-header{
+    height: 56px;
+    width: 100%;
+    background-color:#121212;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+.imdb-navbar{
+    height: 56px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.imdb-logo{
+    background-color: #F5C518;
+    padding: 2px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.imdb-logo a{
+  font-size:22px; 
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.imdb-watchlist{
+    cursor: pointer;
+    height: 40px;
+    border-radius: 4px;
+    padding-top: 2px;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.imdb-watchlist:hover{
+    background-color:rgb(32, 32, 32) ;
+}
+.imdb-watchlist span{
+    color:  rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 600;
+}
+.imdb-watchlist img{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: 2px;
+}
+.imdb-signin{
+    cursor: pointer;
+    border-radius: 4px;
+    height: 40px;
+}
+.imdb-signin p{
+    color:  rgb(255, 255, 255);
+    font-size: 22px;
+    font-weight: 400;
+    padding-top: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.imdb-signin:hover{
+    background-color:rgb(40, 40, 40) ;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+#watchlist-container{
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+}
+.watchlist-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.watchlist-img img{
+    height: 160px;
+    width: 115px;
+}
+.watchlist-details{
+    margin-left: 10px;
+    width: 75%;
+}
+.watchlist-details h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+.watchlist-details p{
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    font-weight: 400;
+    margin-top: 5px;
+}
+.watchlist-details span{
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    position: relative;
+    top: 3px;
+    font-weight: 400;
+}
+.watchlist-details span img{
+    height: 12px;
+    width: 12px;
+    margin-right: 3px;
+}
+.watchlist-details .director{
+    font-size: 12px;
+    color: rgb(19, 108, 178);
+    font-weight: 400;
+    margin-top: 8px;
+}
+.watchlist-details .description{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(51, 51, 51);
+}
+.watchlist-buttons{
+    margin-top: 5px;
+}
+.watchlist-buttons button {
+   border: none;
+   padding: 8px 50px;
+   border-radius: 4px;
+   background-color: #f5c518;
+}
+.watchlist-buttons button:hover{
+    background-color: #cfa50a;
+}
+.watchlist-buttons button a{
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+}
+.border{
+    width: 88%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.30);
+    border-radius: 10px;
+    margin-left: 50px;
+}
+/* empty watchlist ///////////////////////////////////////////////////////////////////////////// */
+.noitems{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.noitems img{
+  height: 200px;
+  width: 200px;
+}
+.noitems h2,.noitems p{
+    margin-top: 20px;
+}

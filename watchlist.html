@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./watchlist.css">
+</head>
+<body>
+
+  <div class="imdb-header" >
+    <div class="imdb-navbar">
+      <div class="imdb-logo">
+        <a href="./imdb.html">IMDb</a>
+      </div>
+      <!-- <div class="imdb-search">
+        <input type="search" placeholder="Search IMDb" id="search-input" autocomplete="off"/>
+        <img src="./search.png" alt="" />
+        <div id="search-user" >
+          <div class="searchcontainer"> 
+              <div class="searchcard">  
+                <img src="" alt="">
+              </div>
+              <div class="searchdetails">
+                  <h2></h2>
+                  <p></p>
+                  <span><img src="./star.png" alt=""></span>
+              </div> 
+            </div> 
+        </div>
+      </div> -->
+      <div class="imdb-watchlist">
+        <img src="./book-mark.png" alt="" />
+        <span> Your Watchlist</span>
+      </div>
+      <div class="imdb-signin">
+        <p>Sign In</p>
+      </div>
+    </div>
+  </div>
+
+
+<div id="watchlist-container">
+
+  <!-- <div class="watchlist-card">
+    <div class="watchlist-img">
+      <img src="" alt="">
+    </div>
+    <div class="watchlist-details">
+      <h2></h2>
+      <p></p>
+      <span><img src="" alt=""></span>
+      <p></p>
+      <p></p>
+      <div class="watchlist-buttons">
+        <button><a href="">Watch Now</a></button>
+        <button>Remove From Watchlist</button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="noitems">
+    <img src="./watchlist.png" alt="">
+    <h2>Your Watchlist is empty</h2>
+    <p>Add movies and shows to your Watchlist to keep track of what you want to watch.</p>
+  </div> -->
+
+</div>
+
+<script>
+ 
+  function displayWatchlist() {
+    let watchlist =JSON.parse(localStorage.getItem("watchlist"))|| [];
+    let watchlistContainer = document.getElementById("watchlist-container");
+    watchlistContent = "";
+    if (watchlist.length === 0) {
+      // watchlistContainer.innerHTML = "Your watchlist is empty.";
+      watchlistContent += `  <div class="noitems">
+             <img src="./watchlist.png" alt="">
+            <h2>Your Watchlist is empty</h2>
+               <p>Add movies and shows to your Watchlist to keep track of what you want to watch.</p>
+         </div>`
+         watchlistContainer.innerHTML = watchlistContent;
+    } 
+    else {
+      watchlist.forEach((movie) => {
+        // console.log(movie)
+        let{id,image,title,year,genre,rating,description,director,trailer}=movie;
+       
+        watchlistContent += `<div class="watchlist-card">
+    <div class="watchlist-img">
+      <img src="${image}" alt="">
+    </div>
+    <div class="watchlist-details">
+      <h2>${title}</h2>
+      <p>${year} | ${genre.join(" , ")}</p>
+      <span><img src="./star.png" alt="">${rating}</span>
+      <p class="director">${director}</p>
+      <p class="description">${description}</p>
+      <div class="watchlist-buttons">
+        <button><a href="${trailer}" >Watch Now</a></button>
+        <button class="removewatchlist" id="${id}">Remove From Watchlist</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="border"></div>`;
+      });
+    
+      watchlistContainer.innerHTML = watchlistContent;
+    }
+
+
+    let removewatchlist=document.querySelectorAll(".removewatchlist")
+    console.log(removewatchlist);
+  
+    removewatchlist.forEach((item)=>{
+        item.addEventListener("click",()=>{
+           let movieid=item.getAttribute("id")
+           console.log(movieid)
+           removeFromWatchlist(movieid);
+        })
+    })
+
+  }
+
+
+  function removeFromWatchlist(movieid) {
+    let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+
+    for(i=0;i<watchlist.length;i++){
+      if(watchlist[i]["id"]==movieid){
+        break;
+      }
+    }
+      let removedMovie = watchlist.splice(i, 1);
+      localStorage.setItem("watchlist", JSON.stringify(watchlist));
+      alert(`Removed "${removedMovie[0].title}" from your watchlist!`);
+      displayWatchlist(); 
+    
+  }
+
+  displayWatchlist();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div class="imdb-header" >
+      <div class="imdb-navbar">
+        <div class="imdb-logo">
+          <a href="./imdb.html">IMDb</a>
+        </div>
+        <div class="imdb-search">
+          <input type="search" placeholder="Search IMDb" id="search-input" autocomplete="off"/>
+          <img src="./search.png" alt="" />
+          <div id="search-user" >
+            <!-- <div class="searchcontainer">
+                <div class="searchcard">  
+                  <img src="" alt="">
+                </div>
+                <div class="searchdetails">
+                    <h2></h2>
+                    <p></p>
+                    <span><img src="./star.png" alt=""></span>
+                </div> 
+              </div> -->
+          </div>
+        </div>
+        <div class="imdb-watchlist" >
+          <img src="./book-mark.png" alt="" />
+          <span>Watchlist</span>
+        </div>
+        <div class="imdb-signin">
+          <p>Sign In</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero_section">
+      <div id="maindiv">
+        <!-- <div class="main_pg">
+        <div class="container-img">
+            <img src="" alt="" />
+        </div>
+        <div class="title_details">
+            <div class="title">
+                <h1><span></span></h1>
+            </div>
+            <div class="release_year">
+                <p></p>
+                <p></p>
+            </div>
+            <div class="genre">
+                <p></p>
+            </div>
+             <div class="info">
+                  <img src="./info.png" alt="" />
+            </div>
+        </div>
+        <div class="discrption">
+            <span></span>
+        </div>
+    </div> -->
+      </div>
+    </div>
+    <div class="pages">
+      <p id="pagenumber"></p>
+    </div>
+
+    <!-- <div class="modal-container">
+  <div class="modal-image">
+    <img src="" alt="" />
+  </div>
+  <div class="modal-title_details">
+    <div class="modal-title">
+        <h1><span></span></h1>
+    </div>
+    <div class="modal-release_year">
+        <p></p>
+        <p></p>
+    </div>
+    <div class="modal-genre">
+        <p></p>
+    </div>
+</div> 
+<div class="modal-discrption">
+  <span></span>
+      </div>
+<div class="modal-directors">
+  <p><span></span></p>
+
+    </div>
+<div class="modal-writers">
+  <p><span></span></p>
+</div>
+<div class="modal-buttons">
+  <button><a href="">Trailer</a></button>
+  <button><a href="">Watchlist</a></button>
+</div>
+ -->
+ 
+
+    <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+          
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modalbody">
+
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="singlemovie-details" style="display: none" >
+      <div id="goback">
+        <img src="./go-back.png" alt="">
+        <span>Go Back</span>
+      </div>
+      <div id="singlemovie" >
+
+        <!-- <div class="singlemovie-titledetails">
+          <div class="singlemovie-title">
+            <h1></h1>
+            <p></p>
+          </div>
+          <div class="singlemovie-rating">
+            <p>IMDb RATING</p>
+            <img src="" alt="" width="100" /><span></span><span> / 10</span>
+          </div>
+        </div>
+        <div class="singlemovie-img-details">
+          <img src="" alt="" />
+          <iframe src="" frameborder="0"></iframe>
+        </div>
+        <div class="singlemovie-genre">
+          <p></p>
+        </div>
+        <div class="singlemovie-rest-details">
+          <div class="singlemovie-cont-1">
+            <div class="singlemovie-description">
+              <p></p>
+            </div>
+            <div class="singlemovie-director">
+              <p></p>
+            </div>
+            <div class="singlemovie-writers">
+              <span></span>
+              <p></p>
+            </div>
+          </div>
+          <div class="singlemovie-watchlist">
+            <button>
+              <img class="singlemovie-plusimg" src="" alt="" />Add to Watchlist
+            </button>
+          </div>
+        </div> -->
+
+
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
