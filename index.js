@@ -210,7 +210,7 @@ function buttons() {
         btn.classList.remove("active")
       });
       pagebtn.classList.add("active");
-      displayMovies(i);
+      displayMovies(i);m
       console.log(i);
     });
     pagenumber.appendChild(pagebtn);
